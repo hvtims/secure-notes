@@ -1,0 +1,40 @@
+import 'package:secure_notes/data/db_helper.dart';
+import 'package:secure_notes/models/note.dart';
+
+class NoteDao {
+  static final NoteDao instance = NoteDao._internal();
+  final _dbProvider = AppDatabase.instance;
+
+  NoteDao._internal();
+
+  Future<int> addNote(Note note) async {
+    final db = await _dbProvider.db;
+    return await db.insert('notes', note.toMap());
+  }
+
+  Future<List<Note>> getAllNotes() async {
+    final db = await _dbProvider.db;
+    final List<Map<String, dynamic>> maps = await db.query('notes');
+    return maps.map((map) => Note.fromMap(map)).toList();
+  }
+
+  Future<int> update(Note note) async {
+    final db = await _dbProvider.db;
+    return await db.update(
+      'notes',
+      note.toMap(),
+      where: 'id = ?',
+      whereArgs: [note.id],
+    );
+  }
+
+  Future<int> delete(int id) async {
+    final db = await _dbProvider.db;
+    return await db.delete('notes', where: 'id = ?', whereArgs: [id]);
+  }
+
+  Future<int> deleteAllNotes() async {
+    final db = await _dbProvider.db;
+    return await db.delete('notes');
+  }
+}
