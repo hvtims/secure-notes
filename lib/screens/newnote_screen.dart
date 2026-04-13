@@ -32,7 +32,6 @@ class _NewnoteScreenState extends State<NewnoteScreen> {
                 decoration: InputDecoration(
                   labelText: 'Note Title',
                 ),
-              
               ),
             
           ),

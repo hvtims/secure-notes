@@ -3,7 +3,8 @@ import 'package:secure_notes/data/note_dao.dart';
 import 'package:secure_notes/l10n/app_localizations.dart';
 import 'package:secure_notes/models/note.dart';
 import 'package:secure_notes/screens/note_details_screen.dart';
-import 'newnote_screen.dart';
+import 'package:secure_notes/screens/newnote_screen.dart';
+import 'package:secure_notes/screens/note_edit_screen.dart';
 class HomeScreen extends StatefulWidget {
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -98,7 +99,12 @@ class _HomeScreenState extends State<HomeScreen> {
         );
       },
       onDoubleTap: () {
-        // TODO: Navigate to note edit screen
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => NoteEditScreen(note: note),
+            ),
+          );
       },
       child: Card(
         elevation: 0,
