@@ -54,7 +54,7 @@ class _NewnoteScreenState extends State<NewnoteScreen> {
                   String content = contentController.text;
                   if (title.isNotEmpty && content.isNotEmpty) {
                     NoteDao.instance.addNote(Note(
-                      id : 0,
+                      id : null,
                       title: title,
                       description: content,
                     ));

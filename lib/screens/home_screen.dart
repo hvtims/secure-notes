@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _deleteNote(Note note) {
-    _noteDao.delete(note.id);
+    _noteDao.delete(note.id!);
     _notes.remove(note);
     setState(() {});
   }
