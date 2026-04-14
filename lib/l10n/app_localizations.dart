@@ -177,6 +177,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Scan your fingerprint'**
   String get scanFingerprintReason;
+
+  /// No description provided for @deleteAllTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete all notes?'**
+  String get deleteAllTitle;
+
+  /// No description provided for @deleteAllMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'This action cannot be undone.'**
+  String get deleteAllMessage;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @delete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
 }
 
 class _AppLocalizationsDelegate

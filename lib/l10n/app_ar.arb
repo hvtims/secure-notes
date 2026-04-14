@@ -11,5 +11,9 @@
   "useFingerprint": "استخدم بصمتك للمتابعة",
   "scan": "مسح",
   "authRequired": "المصادقة مطلوبة للوصول إلى التطبيق",
-  "scanFingerprintReason": "قم بمسح بصمتك"
+  "scanFingerprintReason": "قم بمسح بصمتك",
+  "deleteAllTitle": "حذف جميع الملاحظات؟",
+  "deleteAllMessage": "لا يمكن التراجع عن هذا الإجراء.",
+  "cancel": "إلغاء",
+  "delete": "حذف"
 }

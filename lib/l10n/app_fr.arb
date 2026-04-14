@@ -11,5 +11,9 @@
   "useFingerprint": "Utilisez votre empreinte digitale pour continuer",
   "scan": "Scanner",
   "authRequired": "L'authentification est requise pour accéder à l'application",
-  "scanFingerprintReason": "Scannez votre empreinte"
+  "scanFingerprintReason": "Scannez votre empreinte",
+  "deleteAllTitle": "Supprimer toutes les notes ?",
+  "deleteAllMessage": "Cette action est irréversible.",
+  "cancel": "Annuler",
+  "delete": "Supprimer"
 }

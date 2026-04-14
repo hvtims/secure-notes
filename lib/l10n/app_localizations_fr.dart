@@ -48,4 +48,16 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get scanFingerprintReason => 'Scannez votre empreinte';
+
+  @override
+  String get deleteAllTitle => 'Supprimer toutes les notes ?';
+
+  @override
+  String get deleteAllMessage => 'Cette action est irréversible.';
+
+  @override
+  String get cancel => 'Annuler';
+
+  @override
+  String get delete => 'Supprimer';
 }

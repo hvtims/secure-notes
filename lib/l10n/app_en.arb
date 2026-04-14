@@ -11,5 +11,9 @@
   "useFingerprint": "Use your fingerprint to continue",
   "scan": "Scan",
   "authRequired": "Authentication is required to access the app",
-  "scanFingerprintReason": "Scan your fingerprint"
+  "scanFingerprintReason": "Scan your fingerprint",
+  "deleteAllTitle": "Delete all notes?",
+  "deleteAllMessage": "This action cannot be undone.",
+  "cancel": "Cancel",
+  "delete": "Delete"
 }

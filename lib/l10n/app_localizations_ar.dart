@@ -46,4 +46,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get scanFingerprintReason => 'قم بمسح بصمتك';
+
+  @override
+  String get deleteAllTitle => 'حذف جميع الملاحظات؟';
+
+  @override
+  String get deleteAllMessage => 'لا يمكن التراجع عن هذا الإجراء.';
+
+  @override
+  String get cancel => 'إلغاء';
+
+  @override
+  String get delete => 'حذف';
 }

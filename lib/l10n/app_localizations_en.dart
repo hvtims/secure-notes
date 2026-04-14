@@ -46,4 +46,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get scanFingerprintReason => 'Scan your fingerprint';
+
+  @override
+  String get deleteAllTitle => 'Delete all notes?';
+
+  @override
+  String get deleteAllMessage => 'This action cannot be undone.';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get delete => 'Delete';
 }

@@ -81,10 +81,31 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(AppLocalizations.of(context)!.appName),
         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         actions: [
-          IconButton(
+          if (_notes.isNotEmpty) IconButton(
             onPressed: () async {
-              await _noteDao.deleteAllNotes();
-              setState(() => _notes.clear());
+              final l10n = AppLocalizations.of(context)!;
+              final confirm = await showDialog<bool>(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Text(l10n.deleteAllTitle),
+                  content: Text(l10n.deleteAllMessage),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(context, false),
+                      child: Text(l10n.cancel),
+                    ),
+                    TextButton(
+                      onPressed: () => Navigator.pop(context, true),
+                      child: Text(l10n.delete),
+                    ),
+                  ],
+                ),
+              );
+
+              if (confirm == true) {
+                await _noteDao.deleteAllNotes();
+                setState(() => _notes.clear());
+              }
             },
             icon: const Icon(Icons.delete_forever),
           ),
